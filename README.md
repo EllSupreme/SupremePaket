@@ -1,2 +1,2 @@
 # SupremePaket
- Class that manages packets.
+ Class that manages packets for spigot/bukkit.
