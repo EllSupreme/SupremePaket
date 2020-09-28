@@ -2,7 +2,6 @@
 
  Class that manages packets for spigot/bukkit.
 
-
 Server Version | Support
 ---------------|--------
 1.8            |   ✔
