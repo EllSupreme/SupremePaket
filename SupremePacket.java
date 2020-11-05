@@ -1,4 +1,4 @@
-package fr.ellsupreme.supremepacket;
+package io.nathan.supremepacket;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,7 +19,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.ChannelPromise;
 
-public class SupremePacket implements Listener {
+public class NathanPacket implements Listener {
 	
 	private Map<UUID, Data> datas;
 
@@ -29,12 +29,12 @@ public class SupremePacket implements Listener {
 		Bukkit.getPluginManager().registerEvents(new Listener() {
 			@EventHandler
 			public void onJoin(PlayerJoinEvent e) {
-				SupremePacket.this.injectPlayer(e.getPlayer());
+				NathanPacket.this.injectPlayer(e.getPlayer());
 			}
 
 			@EventHandler
 			public void onQuit(PlayerQuitEvent e) {
-				SupremePacket.this.removePlayer(e.getPlayer());
+				NathanPacket.this.removePlayer(e.getPlayer());
 			}
 		}, plugin);
 	}
@@ -69,7 +69,7 @@ public class SupremePacket implements Listener {
 			Object channel = networkManager.getClass().getField("channel").get(networkManager);
 
 			ChannelPipeline pipeline = (ChannelPipeline) channel.getClass().getMethod("pipeline").invoke(channel);
-			pipeline.addBefore("packet_handler", player.getName() + "supra", channelDuplexHandler);
+			pipeline.addBefore("packet_handler", player.getName() + "nathan", channelDuplexHandler);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -83,7 +83,7 @@ public class SupremePacket implements Listener {
 
 			Channel channel = (Channel) networkManager.getClass().getField("channel").get(networkManager);
 			channel.eventLoop().submit(() -> {
-				channel.pipeline().remove(player.getName() + "supra");
+				channel.pipeline().remove(player.getName() + "nathan");
 				return null;
 			});
 		} catch (Exception e) {
