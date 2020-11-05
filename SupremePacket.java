@@ -69,7 +69,7 @@ public class SupremePacket implements Listener {
 			Object channel = networkManager.getClass().getField("channel").get(networkManager);
 
 			ChannelPipeline pipeline = (ChannelPipeline) channel.getClass().getMethod("pipeline").invoke(channel);
-			pipeline.addBefore("packet_handler", player.getName() + "pets", channelDuplexHandler);
+			pipeline.addBefore("packet_handler", player.getName() + "supra", channelDuplexHandler);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -83,7 +83,7 @@ public class SupremePacket implements Listener {
 
 			Channel channel = (Channel) networkManager.getClass().getField("channel").get(networkManager);
 			channel.eventLoop().submit(() -> {
-				channel.pipeline().remove(player.getName() + "pets");
+				channel.pipeline().remove(player.getName() + "supra");
 				return null;
 			});
 		} catch (Exception e) {
