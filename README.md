@@ -5,7 +5,7 @@
   <img alt="Language" src="https://img.shields.io/badge/Lang-java-%23ED8B00.svg?&style=for-the-badge&logo=&logoColor=white" />
 </p>
 
-# SupraPacket
+# NathanPacket
 
  Class that manages packets for spigot/bukkit.
 
@@ -25,4 +25,4 @@ Server Version | Support
 ---
 
 ## Developer
-- Supreme_
+- Nathan Guillaume[https://github.com/Nathan-Guillaume]
