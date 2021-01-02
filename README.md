@@ -25,4 +25,4 @@ Server Version | Support
 ---
 
 ## Developer
-- [Nathan Guillaume](https://github.com/Nathan-Guillaume)
+- [RedHeadEmile](https://github.com/RedHeadEmile)
