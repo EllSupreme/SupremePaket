@@ -1,4 +1,4 @@
-package io.nathan.supremepacket;
+package io.nathan.nathanpacket;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +23,7 @@ public class NathanPacket implements Listener {
 	
 	private Map<UUID, Data> datas;
 
-	public SupremePacket(JavaPlugin plugin) {
+	public NathanPacket(JavaPlugin plugin) {
 		this.datas = new HashMap<>();
 		Bukkit.getOnlinePlayers().forEach(this::injectPlayer);
 		Bukkit.getPluginManager().registerEvents(new Listener() {
