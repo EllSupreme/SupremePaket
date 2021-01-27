@@ -22,7 +22,5 @@ Server Version | Support
 1.15           |   ✔
 1.16           |   ✔
 
----
-
 ## Developer
 - [RedHeadEmile](https://github.com/RedHeadEmile)
